@@ -1,0 +1,56 @@
+.app {
+  width: 100%;
+  display: grid;
+  grid-template-areas: 
+    "header"
+    "main";
+  /* grid-template-columns: 25% 75%; */
+  grid-template-columns: 100%;
+  grid-template-rows: 100px auto;
+
+  margin: 0px auto;
+  width: "100%";
+  max-width: 80vw;
+}
+
+.app > header {
+  grid-area: header;
+}
+
+.app > main {
+  grid-area: main;
+}
+
+.layout {
+  display: grid;
+  /* height: 100%; */
+  grid-template-areas: 
+    "panel people person"
+    "panel people statistic";
+  grid-template-columns: 15% 35% 50%;
+  grid-template-rows: calc(50vh - 100px) calc(50vh - 100px);
+}
+
+.layout > .panel {
+  grid-area: panel;
+}
+
+.layout > .people {
+  grid-area: people;
+}
+
+.layout > .person {
+  grid-area: person;
+}
+
+.layout >  .statistic {
+  grid-area: statistic;
+}
+
+.statistic, .person, .panel, .panel, .people {
+  background-color: #1e1e1e;
+  padding: 12px;
+  margin: 6px;
+  border: 3px #4a7bac solid;
+  border-radius: 12px;
+}

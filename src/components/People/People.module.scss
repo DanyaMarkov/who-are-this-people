@@ -1,0 +1,55 @@
+.people {
+    padding: 6px 4px;
+    height: 100%;
+}
+
+.sortingBlock {
+    display: flex;
+    flex-direction: row;
+}
+
+.sort {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 12px;
+
+    .list {
+        display: flex;
+        flex-direction: row;
+        gap: 6px;
+
+        .active {
+            color: #a2a6e6;
+            text-decoration: underline;
+        }
+    }
+}
+
+.peopleList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    height: 95%;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        margin: 10px;
+        max-width: 85px;
+        height: 60px;
+        background: transparent;
+        display: inline-flex;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #a8e890;
+        background-size: 100% 100%;
+
+        &:hover {
+            background-color: #c7f6b6;
+        }
+        &:active {
+            transition: 0.5s;
+            background-color: #cfff8d;
+        }
+    }
+}
