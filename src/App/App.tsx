@@ -1,9 +1,9 @@
-import GeneratePanel from "@components/GeneratePanel/GeneratePanel";
-import Header from "@components/Header/Header";
-import People from "@components/People/People";
-import Person from "@components/PersonalInfo/Person";
-import Statistic from "@components/Statistic/Statistic";
-import "./App.css";
+import GeneratePanel from '@components/GeneratePanel/GeneratePanel';
+import Header from '@components/Header/Header';
+import People from '@components/People/People';
+import Person from '@components/PersonalInfo/Person';
+import Statistic from '@components/Statistic/Statistic';
+import './App.css';
 
 const App = () => {
     return (

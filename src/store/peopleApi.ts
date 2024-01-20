@@ -1,10 +1,9 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
-
 export const peopleApi = createApi({
     reducerPath: 'peopleApi',
     tagTypes: ['People'],
-    baseQuery: fetchBaseQuery({baseUrl: 'https://randomuser.me/api/'}),
+    baseQuery: fetchBaseQuery({ baseUrl: 'https://randomuser.me/api/' }),
     endpoints: (build) => ({
         getPeople: build.query({
             query: (limit) => `?${limit && `results=${limit}`}`,
@@ -16,8 +15,8 @@ export const peopleApi = createApi({
             //       { type: 'People', id: 'LIST' },
             //     ]
             //   : [{ type: 'PosPeoplets', id: 'LIST' }],
-        })
-    })
+        }),
+    }),
 });
 
 export const { useGetPeopleQuery } = peopleApi;

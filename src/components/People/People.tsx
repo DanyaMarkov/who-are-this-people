@@ -1,13 +1,13 @@
-import style from "./People.module.scss";
-import { useGetPeopleQuery } from "@store/index";
-import { useAppDispatch, useAppSelector } from "@hooks/redux-hooks";
-import { IPeopleResult } from "./types";
-import { useEffect, useMemo, useState } from "react";
-import peopleSlice from "@store/people-slice";
-import PersonItem from "@components/PersonItem/PersonItem";
-import cn from "classnames";
-import { getObjectValueByPath } from "./utils";
-import { sortingOptions } from "./variables";
+import style from './People.module.scss';
+import { useGetPeopleQuery } from '@store/index';
+import { useAppDispatch, useAppSelector } from '@hooks/redux-hooks';
+import { IPeopleResult } from './types';
+import { useEffect, useMemo, useState } from 'react';
+import peopleSlice from '@store/people-slice';
+import PersonItem from '@components/PersonItem/PersonItem';
+import cn from 'classnames';
+import { getObjectValueByPath } from './utils';
+import { sortingOptions } from './variables';
 
 const People = () => {
     const peopleLimit = useAppSelector((state) => state.app.peopleCount);
@@ -26,9 +26,10 @@ const People = () => {
             const peopleArray: IPeopleResult[] = [...data.results];
 
             return peopleArray.sort((a, b) =>
-                getObjectValueByPath(currentSorting.property, a) > getObjectValueByPath(currentSorting.property, b)
+                getObjectValueByPath(currentSorting.property, a) >
+                getObjectValueByPath(currentSorting.property, b)
                     ? 1
-                    : -1
+                    : -1,
             );
         }
     }, [data, currentSorting]);
@@ -47,8 +48,7 @@ const People = () => {
                                 className={cn({
                                     [style.active]: currentSorting.field === sortElement.field,
                                 })}
-                                onClick={() => setCurrentSorting(sortElement)}
-                            >
+                                onClick={() => setCurrentSorting(sortElement)}>
                                 {sortElement.title}
                             </li>
                         );

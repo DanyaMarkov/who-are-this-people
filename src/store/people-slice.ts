@@ -2,23 +2,23 @@ import { IPeopleResult } from './../components/People/types';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 type PeopleStateType = {
-  peopleList: IPeopleResult[];
-}
+    peopleList: IPeopleResult[];
+};
 
 const initialPeopleState: PeopleStateType = {
-  peopleList: [],
+    peopleList: [],
 };
 
 const peopleSlice = createSlice({
-  name: 'people',
+    name: 'people',
 
-  initialState: initialPeopleState,
+    initialState: initialPeopleState,
 
-  reducers: {
-    setPeopleList(state, action: PayloadAction<IPeopleResult[]>) {
-      state.peopleList = action.payload;
+    reducers: {
+        setPeopleList(state, action: PayloadAction<IPeopleResult[]>) {
+            state.peopleList = action.payload;
+        },
     },
-  },
 });
 
 export default peopleSlice;

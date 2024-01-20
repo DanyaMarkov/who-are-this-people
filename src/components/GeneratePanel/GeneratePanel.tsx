@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { useAppDispatch } from "../../hooks/redux-hooks";
-import appSlice from "@store/app-slice";
-import style from "./GeneratePanel.module.scss";
+import { useState } from 'react';
+import { useAppDispatch } from '../../hooks/redux-hooks';
+import appSlice from '@store/app-slice';
+import style from './GeneratePanel.module.scss';
 
 const GeneratePanel = () => {
     const dispatch = useAppDispatch();
