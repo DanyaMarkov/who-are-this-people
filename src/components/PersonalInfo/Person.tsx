@@ -1,7 +1,12 @@
-import style from './Person.module.scss';
+import ErrorBoundary from '@components/ErrorBoundary/ErrorBoundary';
+import PersonCard from 'remoteApp/PersonCard';
 
 const Person = () => {
-    return <div className={style.person}>Person</div>;
+    return (
+        <ErrorBoundary>
+            <PersonCard />
+        </ErrorBoundary>
+    );
 };
 
 export default Person;
