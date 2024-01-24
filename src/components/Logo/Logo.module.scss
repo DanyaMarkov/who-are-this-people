@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+    height: 100%;
+}
+.icon {
+    width: 40px;
+    height: 40px;
+    border: 0.5px solid #27065c;
+    border-radius: 50%;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+        65deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(69, 69, 160, 1) 0%,
+        rgba(153, 73, 97, 1) 0%,
+        rgba(184, 74, 74, 1) 25%,
+        rgba(101, 111, 151, 1) 41%,
+        rgba(96, 114, 156, 1) 52%,
+        rgba(77, 122, 174, 1) 63%,
+        rgba(0, 157, 244, 1) 74%,
+        rgba(0, 212, 255, 1) 100%
+    );
+}
+
+.title {
+    font-size: 64px;
+    color: #fff;
+    align-items: center;
+    height: 100%;
+    font-family: "Amatic SC", sans-serif;
+    padding-top: 6px;
+}
