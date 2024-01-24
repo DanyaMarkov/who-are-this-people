@@ -21,10 +21,21 @@ const GeneratePanel = () => {
 
     return (
         <div className={style.panel}>
-            GeneratePanel
-            <input type="range" min={5} max={50} value={range} onChange={onRangeChange} />
-            <span>{range}</span>
-            <button onClick={() => generatePeopleList()}>Сгенерировать</button>
+            <div className={style.range}>
+                <input
+                    className={style.rangeInput}
+                    type="range"
+                    min={5}
+                    max={50}
+                    value={range}
+                    onChange={onRangeChange}
+                />
+                <span>{range}</span>
+            </div>
+
+            <button onClick={() => generatePeopleList()} className={style.generateButton}>
+                Сгенерировать
+            </button>
         </div>
     );
 };

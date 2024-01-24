@@ -17,13 +17,9 @@ const Statistic = () => {
 
     const data = convertDataForAgeAndCountStatistic(peopleList);
 
-    console.log('data', data);
-
     return (
         <div className={style.statistic}>
             <ResponsiveContainer width="100%" height={300}>
-                <span>Общее количество людей: {peopleList?.length}</span>
-
                 <LineChart
                     width={500}
                     height={300}
@@ -39,8 +35,20 @@ const Statistic = () => {
                     <YAxis />
                     <Tooltip />
                     <Legend />
-                    <Line type="monotone" dataKey="male" stroke="#8884d8" activeDot={{ r: 6 }} />
-                    <Line type="monotone" dataKey="female" stroke="#82ca9d" activeDot={{ r: 6 }} />
+                    <Line
+                        type="monotone"
+                        dataKey="male"
+                        name="Мужчины"
+                        stroke="#8882dd"
+                        activeDot={{ r: 6 }}
+                    />
+                    <Line
+                        type="monotone"
+                        dataKey="female"
+                        name="Женщины"
+                        stroke="#82ca9d"
+                        activeDot={{ r: 6 }}
+                    />
                 </LineChart>
             </ResponsiveContainer>
         </div>

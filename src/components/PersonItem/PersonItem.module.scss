@@ -3,7 +3,7 @@
     flex-direction: row;
     border-radius: 6px;
     border: 1px solid black;
-
+    align-items: center;
     justify-content: space-between;
     padding: 10px 14px;
 
@@ -12,13 +12,24 @@
         img {
             border-radius: 6px;
         }
+
+        .name {
+            font-size: 18px;
+            font-weight: 700;
+            margin-left: 12px;
+            cursor: default;
+        }
+    }
+
+    &:hover {
+        filter: brightness(1.1);
     }
 }
 
 .male {
-    background: rgb(91, 91, 181);
+    background: rgb(69, 69, 160);
 }
 
 .female {
-    background: rgb(199, 88, 88);
+    background: rgb(167, 67, 67);
 }

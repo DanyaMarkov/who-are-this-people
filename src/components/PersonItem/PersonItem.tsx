@@ -40,8 +40,7 @@ const PersonItem = motion(
                         alt={`фото пользователя ${personInfo.name.first}`}
                         effect="blur"
                     />
-
-                    <span>{personInfo.name.first}</span>
+                    <span className={style.name}>{personInfo.name.first}</span>
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column' }}>
                     <div>{personInfo.dob.age}</div>
