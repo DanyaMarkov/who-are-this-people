@@ -6,8 +6,8 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px 14px;
+    box-sizing: border-box;
 
-    // .main-person-info {
     .mainPersonInfo {
         img {
             border-radius: 6px;
@@ -19,6 +19,12 @@
             margin-left: 12px;
             cursor: default;
         }
+
+        .age {
+            display: flex;
+            flex-direction: column;
+            font-size: 16px;
+        }
     }
 
     &:hover {
@@ -27,9 +33,14 @@
 }
 
 .male {
-    background: rgb(69, 69, 160);
+    background: #4545a0;
 }
 
 .female {
-    background: rgb(167, 67, 67);
+    background: #a74343;
+}
+
+.active {
+    box-sizing: border-box;
+    border-left: 3px solid rgb(234, 234, 234);
 }

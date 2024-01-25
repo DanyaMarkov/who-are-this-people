@@ -14,7 +14,6 @@ class ErrorBoundary extends Component<Props, State> {
     };
 
     public static getDerivedStateFromError(_: Error): State {
-        // Update state so the next render will show the fallback UI.
         return { hasError: true };
     }
 
@@ -24,7 +23,12 @@ class ErrorBoundary extends Component<Props, State> {
 
     public render() {
         if (this.state.hasError) {
-            return <h1>Простите.. что-то пошло не так</h1>;
+            return (
+                <h1>
+                    Сервис не доступен. Попробуйте перезапустить модуль (npm run preview в корне
+                    модуля)
+                </h1>
+            );
         }
 
         return this.props.children;

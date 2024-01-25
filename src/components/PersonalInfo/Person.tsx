@@ -1,5 +1,7 @@
 import ErrorBoundary from '@components/ErrorBoundary/ErrorBoundary';
-import PersonCard from 'remoteApp/PersonCard';
+import { lazy } from 'react';
+// @ts-ignore
+const PersonCard = lazy(() => import('remoteApp/PersonCard'));
 
 const Person = () => {
     return (
