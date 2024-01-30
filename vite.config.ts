@@ -14,6 +14,11 @@ export default defineConfig({
             shared: ['react','react-dom'],
           })
     ],
+    css: {
+        modules: {
+            localsConvention: 'camelCase',
+        },
+    },
     resolve: {
         alias: {
             '@components': path.resolve('./src/components'),
